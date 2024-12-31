@@ -1,0 +1,468 @@
+!function(e, t) {
+    "object" == typeof exports && "object" == typeof module ? module.exports = t() : "function" == typeof define && define.amd ? define([], t) : "object" == typeof exports ? exports.detectIncognito = t() : e.detectIncognito = t()
+}(this, (function() {
+    return function() {
+        "use strict";
+        var e = {};
+        return {
+            598: function(e, t) {
+                var n = this && this.__awaiter || function(e, t, n, o) {
+                    return new (n || (n = Promise))((function(r, i) {
+                        function a(e) {
+                            try {
+                                u(o.next(e))
+                            } catch (e) {
+                                i(e)
+                            }
+                        }
+                        function c(e) {
+                            try {
+                                u(o.throw(e))
+                            } catch (e) {
+                                i(e)
+                            }
+                        }
+                        function u(e) {
+                            var t;
+                            e.done ? r(e.value) : (t = e.value,
+                            t instanceof n ? t : new n((function(e) {
+                                e(t)
+                            }
+                            ))).then(a, c)
+                        }
+                        u((o = o.apply(e, t || [])).next())
+                    }
+                    ))
+                }
+                  , o = this && this.__generator || function(e, t) {
+                    var n, o, r, i, a = {
+                        label: 0,
+                        sent: function() {
+                            if (1 & r[0])
+                                throw r[1];
+                            return r[1]
+                        },
+                        trys: [],
+                        ops: []
+                    };
+                    return i = {
+                        next: c(0),
+                        throw: c(1),
+                        return: c(2)
+                    },
+                    "function" == typeof Symbol && (i[Symbol.iterator] = function() {
+                        return this
+                    }
+                    ),
+                    i;
+                    function c(c) {
+                        return function(u) {
+                            return function(c) {
+                                if (n)
+                                    throw new TypeError("Generator is already executing.");
+                                for (; i && (i = 0,
+                                c[0] && (a = 0)),
+                                a; )
+                                    try {
+                                        if (n = 1,
+                                        o && (r = 2 & c[0] ? o.return : c[0] ? o.throw || ((r = o.return) && r.call(o),
+                                        0) : o.next) && !(r = r.call(o, c[1])).done)
+                                            return r;
+                                        switch (o = 0,
+                                        r && (c = [2 & c[0], r.value]),
+                                        c[0]) {
+                                        case 0:
+                                        case 1:
+                                            r = c;
+                                            break;
+                                        case 4:
+                                            return a.label++,
+                                            {
+                                                value: c[1],
+                                                done: !1
+                                            };
+                                        case 5:
+                                            a.label++,
+                                            o = c[1],
+                                            c = [0];
+                                            continue;
+                                        case 7:
+                                            c = a.ops.pop(),
+                                            a.trys.pop();
+                                            continue;
+                                        default:
+                                            if (!(r = a.trys,
+                                            (r = r.length > 0 && r[r.length - 1]) || 6 !== c[0] && 2 !== c[0])) {
+                                                a = 0;
+                                                continue
+                                            }
+                                            if (3 === c[0] && (!r || c[1] > r[0] && c[1] < r[3])) {
+                                                a.label = c[1];
+                                                break
+                                            }
+                                            if (6 === c[0] && a.label < r[1]) {
+                                                a.label = r[1],
+                                                r = c;
+                                                break
+                                            }
+                                            if (r && a.label < r[2]) {
+                                                a.label = r[2],
+                                                a.ops.push(c);
+                                                break
+                                            }
+                                            r[2] && a.ops.pop(),
+                                            a.trys.pop();
+                                            continue
+                                        }
+                                        c = t.call(e, a)
+                                    } catch (e) {
+                                        c = [6, e],
+                                        o = 0
+                                    } finally {
+                                        n = r = 0
+                                    }
+                                if (5 & c[0])
+                                    throw c[1];
+                                return {
+                                    value: c[0] ? c[1] : void 0,
+                                    done: !0
+                                }
+                            }([c, u])
+                        }
+                    }
+                }
+                ;
+                function r() {
+                    return n(this, void 0, Promise, (function() {
+                        return o(this, (function(e) {
+                            switch (e.label) {
+                            case 0:
+                                return [4, new Promise((function(e, t) {
+                                    var n, o, r = "Unknown";
+                                    function i(t) {
+                                        e({
+                                            isPrivate: t,
+                                            browserName: r
+                                        })
+                                    }
+                                    function a(e) {
+                                        return e === eval.toString().length
+                                    }
+                                    function c() {
+                                        void 0 !== navigator.maxTouchPoints ? function() {
+                                            var e = String(Math.random());
+                                            try {
+                                                window.indexedDB.open(e, 1).onupgradeneeded = function(t) {
+                                                    var n, o, r = null === (n = t.target) || void 0 === n ? void 0 : n.result;
+                                                    try {
+                                                        r.createObjectStore("test", {
+                                                            autoIncrement: !0
+                                                        }).put(new Blob),
+                                                        i(!1)
+                                                    } catch (e) {
+                                                        var a = e;
+                                                        return e instanceof Error && (a = null !== (o = e.message) && void 0 !== o ? o : e),
+                                                        "string" != typeof a ? void i(!1) : void i(a.includes("BlobURLs are not yet supported"))
+                                                    } finally {
+                                                        r.close(),
+                                                        window.indexedDB.deleteDatabase(e)
+                                                    }
+                                                }
+                                            } catch (e) {
+                                                i(!1)
+                                            }
+                                        }() : function() {
+                                            var e = window.openDatabase
+                                              , t = window.localStorage;
+                                            try {
+                                                e(null, null, null, null)
+                                            } catch (e) {
+                                                return void i(!0)
+                                            }
+                                            try {
+                                                t.setItem("test", "1"),
+                                                t.removeItem("test")
+                                            } catch (e) {
+                                                return void i(!0)
+                                            }
+                                            i(!1)
+                                        }()
+                                    }
+                                    function u() {
+                                        navigator.webkitTemporaryStorage.queryUsageAndQuota((function(e, t) {
+                                            var n;
+                                            i(Math.round(t / 1048576) < 2 * Math.round((void 0 !== (n = window).performance && void 0 !== n.performance.memory && void 0 !== n.performance.memory.jsHeapSizeLimit ? performance.memory.jsHeapSizeLimit : 1073741824) / 1048576))
+                                        }
+                                        ), (function(e) {
+                                            t(new Error("detectIncognito somehow failed to query storage quota: " + e.message))
+                                        }
+                                        ))
+                                    }
+                                    function d() {
+                                        void 0 !== self.Promise && void 0 !== self.Promise.allSettled ? u() : (0,
+                                        window.webkitRequestFileSystem)(0, 1, (function() {
+                                            i(!1)
+                                        }
+                                        ), (function() {
+                                            i(!0)
+                                        }
+                                        ))
+                                    }
+                                    void 0 !== (o = navigator.vendor) && 0 === o.indexOf("Apple") && a(37) ? (r = "Safari",
+                                    c()) : function() {
+                                        var e = navigator.vendor;
+                                        return void 0 !== e && 0 === e.indexOf("Google") && a(33)
+                                    }() ? (n = navigator.userAgent,
+                                    r = n.match(/Chrome/) ? void 0 !== navigator.brave ? "Brave" : n.match(/Edg/) ? "Edge" : n.match(/OPR/) ? "Opera" : "Chrome" : "Chromium",
+                                    d()) : void 0 !== document.documentElement && void 0 !== document.documentElement.style.MozAppearance && a(37) ? (r = "Firefox",
+                                    i(void 0 === navigator.serviceWorker)) : void 0 !== navigator.msSaveBlob && a(39) ? (r = "Internet Explorer",
+                                    i(void 0 === window.indexedDB)) : t(new Error("detectIncognito cannot determine the browser"))
+                                }
+                                ))];
+                            case 1:
+                                return [2, e.sent()]
+                            }
+                        }
+                        ))
+                    }
+                    ))
+                }
+                Object.defineProperty(t, "__esModule", {
+                    value: !0
+                }),
+                t.detectIncognito = void 0,
+                t.detectIncognito = r,
+                t.default = r
+            }
+        }[598](0, e),
+        e = e.default
+    }()
+}
+));
+if ("https://www.google.com/" == document.referrer || "https://www.google.com.vn/" == document.referrer || "https://google.com.vn/" == document.referrer || "https://google.com/" == document.referrer || document.referrer.includes("https://www.google.com")) {
+    (style = document.createElement("style")).type = "text/css",
+    style.innerHTML = "\n  #encodelink-embed-btn.disabled .traffic-button-container {\n    opacity: 0.7;\n    cursor: not-allowed;\n    user-select: none;\n  }\n\n  .traffic-button-container * {\n    margin: 0;\n    padding: 0;\n    box-sizing: border-box;\n  }\n\n  .traffic-button-container {\n    --traffic-button-color: #fff;\n    --traffic-button-bg: #0d860d;\n    --traffic-button-height: 40px;\n    --traffic-button-logo-size: 40px;\n    --traffic-button-padding-logo: 5px;\n    --traffic-button-image-position-left: 39.8px;\n    --traffic-button-padding-x: 20px;\n    --traffic-button-padding-y: 8px;\n\n    display: inline-block;\n    padding-top: calc(\n      (var(--traffic-button-logo-size) - var(--traffic-button-height)) / 2\n    );\n    padding-bottom: calc(\n      (var(--traffic-button-logo-size) - var(--traffic-button-height)) / 2\n    );\n    padding-left: var(--traffic-button-image-position-left);\n    margin: 0;\n    border: 1px solid transparent;\n    outline: none;\n\n    color: var(--traffic-button-color);\n    background-color: transparent;\n\n    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',\n      Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',\n      sans-serif;\n    font-weight: 700 !important;\n    font-size: 16px !important;\n    line-height: 1.15 !important;\n    white-space: nowrap !important;\n    vertical-align: middle;\n\n    cursor: pointer;\n    transition: all 0.3 ease;\n  }\n\n  .traffic-button {\n    position: relative;\n    color: var(--traffic-button-color);\n    background-color: var(--traffic-button-bg);\n    border-top-right-radius: 5px;\n    border-bottom-right-radius: 5px;\n  }\n\n  .sc-button:hover {\n    filter: grayscale(10%);\n  }\n\n  .sc-button:active {\n    filter: grayscale(20%);\n  }\n\n  .traffic-button__logo-container {\n    position: absolute;\n    top: 50%;\n    left: 0;\n\n    transform: translateY(-50%);\n    transform: translateY(-50%)\n      translateX(calc(var(--traffic-button-image-position-left) * -1));\n    width: var(--traffic-button-logo-size) !important;\n    height: var(--traffic-button-logo-size) !important;\n    padding: var(--traffic-button-padding-logo);\n    background-color: var(--traffic-button-bg);\n\n    user-select: none;\n  border-top-left-radius: 5px;\n border-bottom-left-radius: 5px;\n}\n\n  .traffic-button__logo-image {\n    width: 100% !important;\n    height: 100% !important;\n    object-fit: contain !important;\n  margin-left: 7px;\n}\n\n  .traffic-button__content {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    height: var(--traffic-button-height);\n    padding-left: var(--traffic-button-padding-x);\n    padding-right: var(--traffic-button-padding-x);\n  }\n\n  .traffic-button-container.active {\n    padding-top: calc(\n      (var(--traffic-button-logo-size)) / 2\n    );\n    padding-bottom: 0;\n    padding-left: 0;\n  }\n\n  .traffic-button-container.active .traffic-button__logo-container {\n    top: 0;\n    left: 50%;\n    transform: translate(-50%, -50%);\n  }\n\n  .traffic-button-container.active .traffic-button {\n    border-radius: 16px;\n    padding-top: calc(\n      (var(--traffic-button-logo-size)) / 2\n    );\n    padding-bottom: calc(\n      (var(--traffic-button-logo-size)) / 4\n    );\n  }",
+    document.getElementsByTagName("head")[0].appendChild(style);
+    let n = document.getElementById("traffic-button");
+    n.innerHTML = '\n    <div class="traffic-button-container">\n      <div class="traffic-button">\n        <div class="traffic-button__logo-container">\n          <img\n            src="https://demo24h.wiki/logo.png"\n            alt="logo"\n            class="traffic-button__logo-image"\n          />\n        </div>\n        <div class="traffic-button__content">LẤY MÃ</div>\n      </div>\n    </div>\n  ';
+    let t = n.querySelector(".traffic-button-container")
+      , o = n.querySelector(".traffic-button__content")
+      , e = 0;
+    var counter = 19;
+    let i = 1e3
+      , r = !1
+      , a = !1;
+    var apv = "https://demo24h.wiki/Ping/";
+    n.onclick = async function(s) {
+        if (!a && !r) {
+            a = !0;
+            var c = ([1e7] + -1e3 + -4e3 + -8e3 + -1e11).replace(/[018]/g, (n => (n ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> n / 4).toString(16)));
+            setCookie("vid", c, 6);
+            let u = await optionData(apv + "Data", c);
+            counter = u.headers.get("Cd") ?? [80, 85, 90, 95, 100, 105, 110, 115, 120]
+            const randomIndex = Math.floor(Math.random() * counter.length)
+            counter = counter[randomIndex]
+            var d = u.headers.get("Ms") ?? 0;
+            async function l(a) {
+                if (e <= a && (counter -= 1,
+                o.innerHTML = "Đợi " + counter + "s",
+                e = a + i),
+                counter > 0)
+                    requestAnimationFrame(l);
+                else {
+                    var s, u, f, g = "";
+                    screen.width && (g += (width = screen.width ? screen.width : "") + " x " + (height = screen.height ? screen.height : ""));
+                    var b = navigator.appVersion
+                      , p = navigator.userAgent
+                      , v = navigator.appName
+                      , m = "" + parseFloat(navigator.appVersion)
+                      , h = parseInt(navigator.appVersion, 10);
+                    -1 != (u = p.indexOf("Opera")) && (v = "Opera",
+                    m = p.substring(u + 6),
+                    -1 != (u = p.indexOf("Version")) && (m = p.substring(u + 8))),
+                    -1 != (u = p.indexOf("OPR")) ? (v = "Opera",
+                    m = p.substring(u + 4)) : -1 != (u = p.indexOf("MSIE")) ? (v = "Microsoft Internet Explorer",
+                    m = p.substring(u + 5)) : -1 != (u = p.indexOf("Chrome")) ? (v = "Chrome",
+                    m = p.substring(u + 7)) : -1 != (u = p.indexOf("Safari")) ? (v = "Safari",
+                    m = p.substring(u + 7),
+                    -1 != (u = p.indexOf("Version")) && (m = p.substring(u + 8))) : -1 != (u = p.indexOf("Firefox")) ? (v = "Firefox",
+                    m = p.substring(u + 8)) : -1 != p.indexOf("Trident/") ? (v = "Microsoft Internet Explorer",
+                    m = p.substring(p.indexOf("rv:") + 3)) : (s = p.lastIndexOf(" ") + 1) < (u = p.lastIndexOf("/")) && (v = p.substring(s, u),
+                    m = p.substring(u + 1),
+                    v.toLowerCase() == v.toUpperCase() && (v = navigator.appName)),
+                    -1 != (f = m.indexOf(";")) && (m = m.substring(0, f)),
+                    -1 != (f = m.indexOf(" ")) && (m = m.substring(0, f)),
+                    -1 != (f = m.indexOf(")")) && (m = m.substring(0, f)),
+                    isNaN(h = parseInt("" + m, 10)) && (m = "" + parseFloat(navigator.appVersion),
+                    h = parseInt(navigator.appVersion, 10));
+                    var w = /Mobile|mini|Fennec|Android|iP(ad|od|hone)/.test(b)
+                      , x = !!navigator.cookieEnabled;
+                    void 0 !== navigator.cookieEnabled || x || (document.cookie = "testcookie",
+                    x = -1 != document.cookie.indexOf("testcookie"));
+                    var W = "-"
+                      , O = [{
+                        s: "Windows 10",
+                        r: /(Windows 10.0|Windows NT 10.0)/
+                    }, {
+                        s: "Windows 8.1",
+                        r: /(Windows 8.1|Windows NT 6.3)/
+                    }, {
+                        s: "Windows 8",
+                        r: /(Windows 8|Windows NT 6.2)/
+                    }, {
+                        s: "Windows 7",
+                        r: /(Windows 7|Windows NT 6.1)/
+                    }, {
+                        s: "Windows Vista",
+                        r: /Windows NT 6.0/
+                    }, {
+                        s: "Windows Server 2003",
+                        r: /Windows NT 5.2/
+                    }, {
+                        s: "Windows XP",
+                        r: /(Windows NT 5.1|Windows XP)/
+                    }, {
+                        s: "Windows 2000",
+                        r: /(Windows NT 5.0|Windows 2000)/
+                    }, {
+                        s: "Windows ME",
+                        r: /(Win 9x 4.90|Windows ME)/
+                    }, {
+                        s: "Windows 98",
+                        r: /(Windows 98|Win98)/
+                    }, {
+                        s: "Windows 95",
+                        r: /(Windows 95|Win95|Windows_95)/
+                    }, {
+                        s: "Windows NT 4.0",
+                        r: /(Windows NT 4.0|WinNT4.0|WinNT|Windows NT)/
+                    }, {
+                        s: "Windows CE",
+                        r: /Windows CE/
+                    }, {
+                        s: "Windows 3.11",
+                        r: /Win16/
+                    }, {
+                        s: "Android",
+                        r: /Android/
+                    }, {
+                        s: "Open BSD",
+                        r: /OpenBSD/
+                    }, {
+                        s: "Sun OS",
+                        r: /SunOS/
+                    }, {
+                        s: "Linux",
+                        r: /(Linux|X11)/
+                    }, {
+                        s: "iOS",
+                        r: /(iPhone|iPad|iPod)/
+                    }, {
+                        s: "Mac OS X",
+                        r: /Mac OS X/
+                    }, {
+                        s: "Mac OS",
+                        r: /(MacPPC|MacIntel|Mac_PowerPC|Macintosh)/
+                    }, {
+                        s: "QNX",
+                        r: /QNX/
+                    }, {
+                        s: "UNIX",
+                        r: /UNIX/
+                    }, {
+                        s: "BeOS",
+                        r: /BeOS/
+                    }, {
+                        s: "OS/2",
+                        r: /OS\/2/
+                    }, {
+                        s: "Search Bot",
+                        r: /(nuhk|Googlebot|Yammybot|Openbot|Slurp|MSNBot|Ask Jeeves\/Teoma|ia_archiver)/
+                    }];
+                    for (var S in O) {
+                        var _ = O[S];
+                        if (_.r.test(p)) {
+                            W = _.s;
+                            break
+                        }
+                    }
+                    var y = "-";
+                    switch (/Windows/.test(W) && (y = /Windows (.*)/.exec(W)[1],
+                    W = "Windows"),
+                    W) {
+                    case "Mac OS X":
+                        y = /Mac OS X (10[\.\_\d]+)/.exec(p)[1];
+                        break;
+                    case "Android":
+                        y = /Android ([\.\_\d]+)/.exec(p)[1];
+                        break;
+                    case "iOS":
+                        y = (y = /OS (\d+)_(\d+)_?(\d+)?/.exec(b))[1] + "." + y[2] + "." + (0 | y[3])
+                    }
+                    let t = {
+                        screen: g,
+                        browser_name: v,
+                        browser_version: m,
+                        browser_major_version: h.toString(),
+                        is_mobile: w,
+                        os_name: W,
+                        os_version: y,
+                        is_cookies: x,
+                        href: window.location.href,
+                        user_agent: navigator.userAgent,
+                        hostname: "https://" + window.location.hostname
+                    };
+                    postData("https://demo24h.wiki/Ping/Get", t, c).then((t => {
+                        o.innerHTML = "" + t.code,
+                        r = !0,
+                        n.classList.remove("sc-button--disabled"),
+                        n.classList.add("sc-button--show-code")
+                    }
+                    ))
+                }
+            }
+            detectIncognito().then((n => {
+                n.isPrivate ? alert("Vui lòng tắt chế độ ẩn danh") : requestAnimationFrame(l)
+            }
+            ))
+        }
+    }
+}
+function setCookie(n, t, o) {
+    const e = new Date;
+    e.setTime(e.getTime() + 60 * o * 1e3);
+    let i = "expires=" + e.toUTCString();
+    document.cookie = n + "=" + t + ";" + i + ";path=/"
+}
+function getCookie(n) {
+    let t = n + "="
+      , o = decodeURIComponent(document.cookie).split(";");
+    for (let n = 0; n < o.length; n++) {
+        let e = o[n];
+        for (; " " == e.charAt(0); )
+            e = e.substring(1);
+        if (0 == e.indexOf(t))
+            return e.substring(t.length, e.length)
+    }
+    return ""
+}
+async function postData(n="", t={}, o="") {
+    return (await fetch(n, {
+        method: "POST",
+        cache: "no-cache",
+        headers: {
+            "Content-Type": "application/json",
+            rid: o
+        },
+        body: JSON.stringify(t)
+    })).json()
+}
+async function optionData(n="", t="") {
+    return await fetch(n, {
+        method: "OPTIONS",
+        cache: "no-cache",
+        headers: {
+            rid: t
+        }
+    })
+}
